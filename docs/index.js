@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import GithubCorner from 'react-github-corner';
 
-import 'purecss/build/pure.css';
+// import './bootstrap.css';
 import './main.css';
 
 import Example from './example';

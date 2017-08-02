@@ -1,12 +1,16 @@
 import React from 'react';
 
 // Your component being loaded. Can be used below
-import Heading from '../src';
+import Hint from '../src';
 
 export default class Example extends React.Component {
   render() {
     return (
-      <Heading title="Example App" />
+      <Hint localStorageID="hint-1" message="Example App">
+        <div className="container1">
+          test
+        </div>
+      </Hint>
     );
   }
 }

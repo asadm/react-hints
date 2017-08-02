@@ -22,6 +22,15 @@ module.exports = {
     "react/sort-comp": 0,
     "react/no-multi-comp": 0,
     "react/require-extension": 0,
-    "react/prefer-stateless-function": 0
+    "react/prefer-stateless-function": 0,
+    "react/no-did-mount-set-state": 0,
+
+    "react/no-string-refs": 0,
+    "react/no-find-dom-node": 0,
+    "one-var-declaration-per-line": 0,
+    "prefer-const": 0,
+    "react/require-default-props": 0,
+    "one-var": 0,
+    "no-mixed-operators": 0
   }
 };
