@@ -4,6 +4,8 @@ This is a simple component to show floating hints highlighting product features.
 
 [**Online Demo**](https://asadmemon.com/react-hints/)
 
+![](docs/demo.gif?raw=true)
+
 ### Installation
 
 In your React project folder run:
