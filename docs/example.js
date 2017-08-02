@@ -33,7 +33,7 @@ export default class Example extends React.Component {
     return (
       <div className="container">
         <div className="col-xs-12 text-center">
-          <h1><small><a href="https://github.com/asadm">asadm</a> / </small>React Hint</h1>
+          <h1><small><a href="https://github.com/asadm">asadm</a> / </small>React Hints</h1>
           <br /><br />
           <br /><br />
           <br /><br />
