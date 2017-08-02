@@ -1,8 +1,8 @@
 {
-  "name": "react-component-boilerplate",
-  "description": "Boilerplate for React.js components",
-  "author": "Juho Vepsalainen",
-  "user": "survivejs",
+  "name": "react-hint",
+  "description": "",
+  "author": "Asad Memon",
+  "user": "asadm",
   "version": "5.0.1",
   "scripts": {
     "start": "webpack-dev-server --env dev",
@@ -93,7 +93,8 @@
   "keywords": [
     "react",
     "reactjs",
-    "boilerplate"
+    "hint",
+    "react-hint"
   ],
   "license": "MIT",
   "pre-push": [
