@@ -32,6 +32,6 @@ module.exports = {
     "react/require-default-props": 0,
     "one-var": 0,
     "no-mixed-operators": 0,
-    "react/jsx-no-bind": 0
+    "react/jsx-no-bind": 0,
   }
 };

@@ -16,7 +16,9 @@ class Portal extends React.Component {
     let p = this.props.portalId && document.getElementById(this.props.portalId);
     if (!p) {
       p = document.createElement('div');
-      p.id = this.props.portalId;
+      if (this.props.portalId) {
+        p.id = this.props.portalId;
+      }
       document.body.appendChild(p);
     }
     this.portalElement = p;
