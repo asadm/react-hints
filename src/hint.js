@@ -37,12 +37,13 @@ class Hint extends React.Component {
     }
 
     // other stuff
-    if (this.props.localStorageID && localStorage[this.props.localStorageID]) {
+    if (this.props.id && localStorage[`react-hint-${this.props.id}`]) {
       this.setState({ isHidden: true });
     }
     this.update();
 
     window.addEventListener('resize', this.update.bind(this));
+    window.addEventListener('load', this.update.bind(this));
   }
 
   componentWillReceiveProps() {
@@ -51,6 +52,7 @@ class Hint extends React.Component {
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.update.bind(this));
+    window.removeEventListener('load', this.update.bind(this));
   }
 
   update() {
@@ -81,7 +83,7 @@ class Hint extends React.Component {
       return (this.props.children) || false;
     }
     return (
-      <span>
+      <span className="">
         {(this.props.children) ? React.cloneElement(this.props.children, { ref: 'child' }) : false}
         <Portal>
           <OverlayTrigger
@@ -90,9 +92,9 @@ class Hint extends React.Component {
             rootClose
             placement={this.getPopupPlacement()}
             overlay={(
-              <Popover className="hint-popover" id="hint">
+              <Popover className="react-hint-popover" id="hint">
                 <span style={{ marginBottom: '10px', display: 'block' }} >{this.props.message} </span>
-                <button className="btn btn-default btn-sm" onClick={this.onClose}>{this.props.closeText || 'Got It!'}</button>
+                <button className="btn btn-default btn-sm" onClick={this.onClose.bind(this)}>{this.props.closeText || 'Got It!'}</button>
               </Popover>
             )}
           >
@@ -109,8 +111,8 @@ class Hint extends React.Component {
   onClose() {
     this.setState({ isHidden: true });
     this.refs.popupOverlay.hide();
-    if (this.props.localStorageID) {
-      localStorage[this.props.localStorageID] = true;
+    if (this.props.id) {
+      localStorage[`react-hint-${this.props.id}`] = true;
     }
     if (this.props.onClose) {
       this.props.onClose();
@@ -169,16 +171,16 @@ class Hint extends React.Component {
 }
 
 Hint.propTypes = {
-  localStorageID: PropTypes.string.isRequired,
-  message: React.PropTypes.oneOfType([React.PropTypes.element, React.PropTypes.string]),
-  byID: PropTypes.string,
-  isHidden: PropTypes.bool,
-  children: PropTypes.element,
+  id: PropTypes.string.isRequired,
+  message: PropTypes.node.isRequired,
   closeText: PropTypes.string,
   position: PropTypes.string,
   popupDirection: PropTypes.string,
   onClose: PropTypes.func,
+  byID: PropTypes.string,
+  isHidden: PropTypes.bool,
 
+  children: PropTypes.node,
   offsetX: PropTypes.number,
   offsetY: PropTypes.number
 };

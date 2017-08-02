@@ -1,6 +1,16 @@
 export default function getStyles() {
   return `
 /* HINTS */
+
+.react-hint-popover, 
+.react-hint-popover *,
+.react-hint,
+.react-hint * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 @-webkit-keyframes "hint-wave" {
  0% {
     -webkit-transform: scale(0);
@@ -71,8 +81,6 @@ export default function getStyles() {
 
 .react-hint {
   position: absolute;
-  margin-top: -2px;
-  margin-left: -2px;
   width: 20px;
   height: 20px;
   border: 2px solid rgba(60, 60, 60, 0.27);
@@ -104,8 +112,8 @@ export default function getStyles() {
   -moz-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
   position: absolute;
-  top: -25px;
-  left: -25px;
+  top: -17px;
+  left: -17px;
   z-index: 1;
   opacity: 0;
 }
@@ -119,8 +127,8 @@ export default function getStyles() {
   background-color: rgba(60, 60, 60, 0.27);
   z-index: 10;
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 3px;
+  left: 3px;
   -webkit-transition: border-color 0.2s ease-out;
   -moz-transition: border-color 0.2s ease-out;
   -ms-transition: border-color 0.2s ease-out;
@@ -137,13 +145,13 @@ export default function getStyles() {
   height: 0px;
 }
 
-.hint-popover.fade {
+.react-hint-popover.fade {
   opacity: 0;
   -webkit-transition: opacity .15s linear;
   -o-transition: opacity .15s linear;
   transition: opacity .15s linear;
 }
-.hint-popover.fade.in {
+.react-hint-popover.fade.in {
   opacity: 1
 }
 
@@ -153,7 +161,7 @@ POP OVER STYLES
 Extracted from Bootstrap
 */
 
-button {
+.react-hint-popover button {
   color: inherit;
   font: inherit;
   margin: 0;
@@ -166,12 +174,12 @@ button {
   line-height: inherit;
 }
 
-button::-moz-focus-inner{
+.react-hint-popover button::-moz-focus-inner{
   border: 0;
   padding: 0;
 }
 
-.btn {
+.react-hint-popover .btn {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -192,103 +200,103 @@ button::-moz-focus-inner{
   -ms-user-select: none;
   user-select: none;
 }
-.btn:focus,
-.btn:active:focus,
-.btn.active:focus,
-.btn.focus,
-.btn:active.focus,
-.btn.active.focus {
+.react-hint-popover .btn:focus,
+.react-hint-popover .btn:active:focus,
+.react-hint-popover .btn.active:focus,
+.react-hint-popover .btn.focus,
+.react-hint-popover .btn:active.focus,
+.react-hint-popover .btn.active.focus {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
-.btn:hover,
-.btn:focus,
-.btn.focus {
+.react-hint-popover .btn:hover,
+.react-hint-popover .btn:focus,
+.react-hint-popover .btn.focus {
   color: #333333;
   text-decoration: none;
 }
-.btn:active,
-.btn.active {
+.react-hint-popover .btn:active,
+.react-hint-popover .btn.active {
   outline: 0;
   background-image: none;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
-.btn.disabled,
-.btn[disabled],
-fieldset[disabled] .btn {
+.react-hint-popover .btn.disabled,
+.react-hint-popover .btn[disabled],
+.react-hint-popover fieldset[disabled] .btn {
   cursor: not-allowed;
   opacity: 0.65;
   filter: alpha(opacity=65);
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-a.btn.disabled,
-fieldset[disabled] a.btn {
+.react-hint-popover a.btn.disabled,
+.react-hint-popover fieldset[disabled] a.btn {
   pointer-events: none;
 }
-.btn-default {
+.react-hint-popover .btn-default {
   color: #333333;
   background-color: #ffffff;
   border-color: #cccccc;
 }
-.btn-default:focus,
-.btn-default.focus {
+.react-hint-popover .btn-default:focus,
+.react-hint-popover .btn-default.focus {
   color: #333333;
   background-color: #e6e6e6;
   border-color: #8c8c8c;
 }
-.btn-default:hover {
+.react-hint-popover .btn-default:hover {
   color: #333333;
   background-color: #e6e6e6;
   border-color: #adadad;
 }
-.btn-default:active,
-.btn-default.active,
-.open > .dropdown-toggle.btn-default {
+.react-hint-popover .btn-default:active,
+.react-hint-popover .btn-default.active,
+.react-hint-popover .open > .dropdown-toggle.btn-default {
   color: #333333;
   background-color: #e6e6e6;
   border-color: #adadad;
 }
-.btn-default:active:hover,
-.btn-default.active:hover,
-.open > .dropdown-toggle.btn-default:hover,
-.btn-default:active:focus,
-.btn-default.active:focus,
-.open > .dropdown-toggle.btn-default:focus,
-.btn-default:active.focus,
-.btn-default.active.focus,
-.open > .dropdown-toggle.btn-default.focus {
+.react-hint-popover .btn-default:active:hover,
+.react-hint-popover .btn-default.active:hover,
+.react-hint-popover .open > .dropdown-toggle.btn-default:hover,
+.react-hint-popover .btn-default:active:focus,
+.react-hint-popover .btn-default.active:focus,
+.react-hint-popover .open > .dropdown-toggle.btn-default:focus,
+.react-hint-popover .btn-default:active.focus,
+.react-hint-popover .btn-default.active.focus,
+.react-hint-popover .open > .dropdown-toggle.btn-default.focus {
   color: #333333;
   background-color: #d4d4d4;
   border-color: #8c8c8c;
 }
-.btn-default:active,
-.btn-default.active,
-.open > .dropdown-toggle.btn-default {
+.react-hint-popover .btn-default:active,
+.react-hint-popover .btn-default.active,
+.react-hint-popover .open > .dropdown-toggle.btn-default {
   background-image: none;
 }
-.btn-default.disabled:hover,
-.btn-default[disabled]:hover,
-fieldset[disabled] .btn-default:hover,
-.btn-default.disabled:focus,
-.btn-default[disabled]:focus,
-fieldset[disabled] .btn-default:focus,
-.btn-default.disabled.focus,
-.btn-default[disabled].focus,
-fieldset[disabled] .btn-default.focus {
+.react-hint-popover .btn-default.disabled:hover,
+.react-hint-popover .btn-default[disabled]:hover,
+.react-hint-popover fieldset[disabled] .btn-default:hover,
+.react-hint-popover .btn-default.disabled:focus,
+.react-hint-popover .btn-default[disabled]:focus,
+.react-hint-popover fieldset[disabled] .btn-default:focus,
+.react-hint-popover .btn-default.disabled.focus,
+.react-hint-popover .btn-default[disabled].focus,
+.react-hint-popover fieldset[disabled] .btn-default.focus {
   background-color: #ffffff;
   border-color: #cccccc;
 }
 
-.btn-sm {
+.react-hint-popover .btn-sm {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
   border-radius: 3px;
 }
 
-.popover {
+.react-hint-popover.popover {
   position: absolute;
   top: 0;
   left: 0;
@@ -321,19 +329,19 @@ fieldset[disabled] .btn-default.focus {
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
-.popover.top {
+.react-hint-popover.popover.top {
   margin-top: -10px;
 }
-.popover.right {
+.react-hint-popover.popover.right {
   margin-left: 10px;
 }
-.popover.bottom {
+.react-hint-popover.popover.bottom {
   margin-top: 10px;
 }
-.popover.left {
+.react-hint-popover.popover.left {
   margin-left: -10px;
 }
-.popover-title {
+.react-hint-popover .popover-title {
   margin: 0;
   padding: 8px 14px;
   font-size: 14px;
@@ -341,11 +349,11 @@ fieldset[disabled] .btn-default.focus {
   border-bottom: 1px solid #ebebeb;
   border-radius: 5px 5px 0 0;
 }
-.popover-content {
+.react-hint-popover .popover-content {
   padding: 9px 14px;
 }
-.popover > .arrow,
-.popover > .arrow:after {
+.react-hint-popover.popover > .arrow,
+.react-hint-popover.popover > .arrow:after {
   position: absolute;
   display: block;
   width: 0;
@@ -353,14 +361,14 @@ fieldset[disabled] .btn-default.focus {
   border-color: transparent;
   border-style: solid;
 }
-.popover > .arrow {
+.react-hint-popover.popover > .arrow {
   border-width: 11px;
 }
-.popover > .arrow:after {
+.react-hint-popover.popover > .arrow:after {
   border-width: 10px;
   content: "";
 }
-.popover.top > .arrow {
+.react-hint-popover.popover.top > .arrow {
   left: 50%;
   margin-left: -11px;
   border-bottom-width: 0;
@@ -368,14 +376,14 @@ fieldset[disabled] .btn-default.focus {
   border-top-color: rgba(0, 0, 0, 0.25);
   bottom: -11px;
 }
-.popover.top > .arrow:after {
+.react-hint-popover.popover.top > .arrow:after {
   content: " ";
   bottom: 1px;
   margin-left: -10px;
   border-bottom-width: 0;
   border-top-color: #ffffff;
 }
-.popover.right > .arrow {
+.react-hint-popover.popover.right > .arrow {
   top: 50%;
   left: -11px;
   margin-top: -11px;
@@ -383,14 +391,14 @@ fieldset[disabled] .btn-default.focus {
   border-right-color: #999999;
   border-right-color: rgba(0, 0, 0, 0.25);
 }
-.popover.right > .arrow:after {
+.react-hint-popover.popover.right > .arrow:after {
   content: " ";
   left: 1px;
   bottom: -10px;
   border-left-width: 0;
   border-right-color: #ffffff;
 }
-.popover.bottom > .arrow {
+.react-hint-popover.popover.bottom > .arrow {
   left: 50%;
   margin-left: -11px;
   border-top-width: 0;
@@ -398,14 +406,14 @@ fieldset[disabled] .btn-default.focus {
   border-bottom-color: rgba(0, 0, 0, 0.25);
   top: -11px;
 }
-.popover.bottom > .arrow:after {
+.react-hint-popover.popover.bottom > .arrow:after {
   content: " ";
   top: 1px;
   margin-left: -10px;
   border-top-width: 0;
   border-bottom-color: #ffffff;
 }
-.popover.left > .arrow {
+.react-hint-popover.popover.left > .arrow {
   top: 50%;
   right: -11px;
   margin-top: -11px;
@@ -413,7 +421,7 @@ fieldset[disabled] .btn-default.focus {
   border-left-color: #999999;
   border-left-color: rgba(0, 0, 0, 0.25);
 }
-.popover.left > .arrow:after {
+.react-hint-popover.popover.left > .arrow:after {
   content: " ";
   right: 1px;
   border-right-width: 0;

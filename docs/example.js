@@ -6,7 +6,10 @@ import Hint from '../src';
 export default class Example extends React.Component {
   render() {
     return (
-      <Hint localStorageID="hint-1" message="Example App">
+      <Hint
+        id="hint-1"
+        message="You can put the hint at any side of the element."
+      >
         <div className="container1">
           test
         </div>
