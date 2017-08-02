@@ -4,6 +4,7 @@ import '../node_modules/highlight.js/styles/monokai-sublime.css';
 
 // Your component being loaded. Can be used below
 import Hint from '../src';
+// import Hint from 'react-hints';
 
 const sample1 = `
 <Hint
