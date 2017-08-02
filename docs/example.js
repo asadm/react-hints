@@ -46,10 +46,12 @@ export default class Example extends React.Component {
           >
             <h3>Wrap your element with <code>{'<Hint/>'}</code> and a hint message.</h3>
           </Hint>
-          <br /><br />
-          <br /><br />
+          <br /><br /><br />
+          <h4><code>npm install react-hints --save</code></h4>
+          <br />
           <br /><br />
           <hr />
+          <h3>Examples</h3>
         </div>
         <div className="col-xs-12 col-md-6 text-center">
           <br />
@@ -177,6 +179,11 @@ export default class Example extends React.Component {
               </tr>
             </tbody>
           </table>
+        </div>
+
+        <div className="col-xs-12 text-center">
+          <hr />
+          <small>2017. Asad Memon</small>
         </div>
       </div>
     );
